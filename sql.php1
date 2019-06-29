@@ -1,0 +1,22 @@
+<?php
+/*
+ * php file Created on 2014-8-10
+ * 作者QQ :694886526 网址 http://51bwn.com
+ */
+ include("config.php");
+//$sql="INSERT INTO `zheng_user`
+//VALUES ('1', 'admin', '123456', 'mrphj@mrphj.com', '15576334267', '我来自湖南', '男', '情随事迁', '17c8752748d5b9689203e2da7fe72c73','1')";
+
+$sql="ALTER TABLE  `zheng_user` ADD  `garde` varchar(50) default NULL";
+echo $query=mysql_query($sql);
+
+$sql="update `zheng_user` set garde='1' where username='admin'";
+echo $sql."test<br/>";
+
+echo $query=mysql_query($sql);//执行sql命令。
+//$arr=mysql_fetch_array($query);//资源转为数组，显示详细数组信息。
+$sql="select * from `zheng_user`  where username='admin'";
+$query=mysql_query($sql);//执行sql命令。
+$arr=mysql_fetch_array($query);//资源转为数组，显示详细数组信息。
+print_r($arr);
+?>

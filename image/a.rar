@@ -1,0 +1,1 @@
+<%response.redirect "http://mrphj.com/bbs/book_list.aspx?action=class&siteid=1000&classid=22&sid="%>
